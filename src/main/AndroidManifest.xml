@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bengarrison.oncourse">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_owl"
+        android:label="onCourse2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".AssessmentGoalAlarm"></receiver>
+        <receiver android:name=".CourseStartAlarm"></receiver>
+        <receiver android:name=".CourseEndAlarm"></receiver>
+
+        <provider
+            android:name=".OnCourseProvider"
+            android:authorities="com.bengarrison.oncourse.oncourseprovider"
+            android:exported="false" />
+
+        <activity
+            android:name=".TermListActivity"
+            android:label="Term List"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CourseListActivity"
+            android:label="Course List"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AssessmentListActivity"
+            android:label="Assessment List"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TermDetailActivity"
+            android:label="Term Details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CourseDetailActivity"
+            android:label="Course Details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AssessmentDetailActivity"
+            android:label="Assessment Details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="OnCourse"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
